@@ -1,0 +1,26 @@
+disabled_rules:
+  - line_length
+  - discouraged_direct_init
+  - trailing_whitespace
+  - vertical_parameter_alignment
+excluded:
+- Carthage
+- Pods
+- aquadroid/R.generated.swift
+- Events4Me/Utils/UIDevice+Type.swift
+
+identifier_name:
+  min_length: # only min_length
+    warning: 2
+    error: 1 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+    - i
+reporter: "xcode"
+
+force_cast: warning # implicitly
+force_try: warning # explicitly
+
+

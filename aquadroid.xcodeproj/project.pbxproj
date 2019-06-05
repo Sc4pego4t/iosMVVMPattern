@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E212ACDB935C163172E3132 /* Pods_aquadroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669A6D753F107991B039FE68 /* Pods_aquadroid.framework */; };
+		F9992E0722A6B8E4009363B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9992E0622A6B8E4009363B5 /* AppDelegate.swift */; };
+		F9992E0922A6B8E4009363B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9992E0822A6B8E4009363B5 /* ViewController.swift */; };
+		F9992E0C22A6B8E4009363B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9992E0A22A6B8E4009363B5 /* Main.storyboard */; };
+		F9992E0E22A6B8E5009363B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9992E0D22A6B8E5009363B5 /* Assets.xcassets */; };
+		F9992E1122A6B8E5009363B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9992E0F22A6B8E5009363B5 /* LaunchScreen.storyboard */; };
+		F9992E1C22A79794009363B5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9992E1B22A79794009363B5 /* R.generated.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		341F4ECAB02E52F4052DF92D /* Pods-aquadroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquadroid.release.xcconfig"; path = "Target Support Files/Pods-aquadroid/Pods-aquadroid.release.xcconfig"; sourceTree = "<group>"; };
+		44C25614E68E1553143555C9 /* Pods-aquadroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aquadroid.debug.xcconfig"; path = "Target Support Files/Pods-aquadroid/Pods-aquadroid.debug.xcconfig"; sourceTree = "<group>"; };
+		669A6D753F107991B039FE68 /* Pods_aquadroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aquadroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9992E0322A6B8E3009363B5 /* aquadroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aquadroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9992E0622A6B8E4009363B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9992E0822A6B8E4009363B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9992E0B22A6B8E4009363B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9992E0D22A6B8E5009363B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9992E1022A6B8E5009363B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9992E1222A6B8E5009363B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9992E1B22A79794009363B5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9992E0022A6B8E3009363B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E212ACDB935C163172E3132 /* Pods_aquadroid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02E4FFA8D4921E32925836CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44C25614E68E1553143555C9 /* Pods-aquadroid.debug.xcconfig */,
+				341F4ECAB02E52F4052DF92D /* Pods-aquadroid.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF48459224653FB0C59AF309 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				669A6D753F107991B039FE68 /* Pods_aquadroid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9992DFA22A6B8E3009363B5 = {
+			isa = PBXGroup;
+			children = (
+				F9992E0522A6B8E4009363B5 /* aquadroid */,
+				F9992E0422A6B8E3009363B5 /* Products */,
+				02E4FFA8D4921E32925836CD /* Pods */,
+				DF48459224653FB0C59AF309 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9992E0422A6B8E3009363B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9992E0322A6B8E3009363B5 /* aquadroid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9992E0522A6B8E4009363B5 /* aquadroid */ = {
+			isa = PBXGroup;
+			children = (
+				F9992E1B22A79794009363B5 /* R.generated.swift */,
+				F9992E0622A6B8E4009363B5 /* AppDelegate.swift */,
+				F9992E0822A6B8E4009363B5 /* ViewController.swift */,
+				F9992E0A22A6B8E4009363B5 /* Main.storyboard */,
+				F9992E0D22A6B8E5009363B5 /* Assets.xcassets */,
+				F9992E0F22A6B8E5009363B5 /* LaunchScreen.storyboard */,
+				F9992E1222A6B8E5009363B5 /* Info.plist */,
+			);
+			path = aquadroid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9992E0222A6B8E3009363B5 /* aquadroid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "aquadroid" */;
+			buildPhases = (
+				EE5682022475619719ABFA88 /* [CP] Check Pods Manifest.lock */,
+				F9992E1822A796CA009363B5 /* R.Swift */,
+				F9992DFF22A6B8E3009363B5 /* Sources */,
+				F9992E0022A6B8E3009363B5 /* Frameworks */,
+				F9992E0122A6B8E3009363B5 /* Resources */,
+				132BADEA94A6EF0C4CC2BFF9 /* [CP] Embed Pods Frameworks */,
+				F9992E1D22A797A1009363B5 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aquadroid;
+			productName = aquadroid;
+			productReference = F9992E0322A6B8E3009363B5 /* aquadroid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9992DFB22A6B8E3009363B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Андрей Глухих";
+				TargetAttributes = {
+					F9992E0222A6B8E3009363B5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "aquadroid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9992DFA22A6B8E3009363B5;
+			productRefGroup = F9992E0422A6B8E3009363B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9992E0222A6B8E3009363B5 /* aquadroid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9992E0122A6B8E3009363B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9992E1122A6B8E5009363B5 /* LaunchScreen.storyboard in Resources */,
+				F9992E0E22A6B8E5009363B5 /* Assets.xcassets in Resources */,
+				F9992E0C22A6B8E4009363B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		132BADEA94A6EF0C4CC2BFF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aquadroid/Pods-aquadroid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aquadroid/Pods-aquadroid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aquadroid/Pods-aquadroid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5682022475619719ABFA88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aquadroid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9992E1822A796CA009363B5 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/aquadroid/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/aquadroid/R.generated.swift\"\n";
+		};
+		F9992E1D22A797A1009363B5 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9992DFF22A6B8E3009363B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9992E0922A6B8E4009363B5 /* ViewController.swift in Sources */,
+				F9992E0722A6B8E4009363B5 /* AppDelegate.swift in Sources */,
+				F9992E1C22A79794009363B5 /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9992E0A22A6B8E4009363B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9992E0B22A6B8E4009363B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9992E0F22A6B8E5009363B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9992E1022A6B8E5009363B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9992E1322A6B8E5009363B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9992E1422A6B8E5009363B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9992E1622A6B8E5009363B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44C25614E68E1553143555C9 /* Pods-aquadroid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EY2FX8K5E8;
+				INFOPLIST_FILE = aquadroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.spb.iac.aquadroid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9992E1722A6B8E5009363B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341F4ECAB02E52F4052DF92D /* Pods-aquadroid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EY2FX8K5E8;
+				INFOPLIST_FILE = aquadroid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.spb.iac.aquadroid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "aquadroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9992E1322A6B8E5009363B5 /* Debug */,
+				F9992E1422A6B8E5009363B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "aquadroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9992E1622A6B8E5009363B5 /* Debug */,
+				F9992E1722A6B8E5009363B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9992DFB22A6B8E3009363B5 /* Project object */;
+}

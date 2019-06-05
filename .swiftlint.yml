@@ -7,7 +7,7 @@ excluded:
 - Carthage
 - Pods
 - aquadroid/R.generated.swift
-- Events4Me/Utils/UIDevice+Type.swift
+- aquadroid/Utils/Extensions/+UIDevice.swift
 
 identifier_name:
   min_length: # only min_length

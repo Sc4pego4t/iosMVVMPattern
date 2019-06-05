@@ -36,6 +36,58 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
+    struct localizable {
+      /// Value: Unable to encode data
+      static let encodingError = Rswift.StringResource(key: "encodingError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Unable to get data
+      static let decodingError = Rswift.StringResource(key: "decodingError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Unable to encode data
+      static func encodingError(_: Void = ()) -> String {
+        return NSLocalizedString("encodingError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Unable to get data
+      static func decodingError(_: Void = ()) -> String {
+        return NSLocalizedString("decodingError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.requests` struct is generated, and contains static references to 3 localization keys.
+    struct requests {
+      /// Value: Audience
+      static let audience = Rswift.StringResource(key: "audience", tableName: "Requests", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Authorization
+      static let authorization = Rswift.StringResource(key: "authorization", tableName: "Requests", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: User-Agent
+      static let userAgent = Rswift.StringResource(key: "userAgent", tableName: "Requests", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Audience
+      static func audience(_: Void = ()) -> String {
+        return NSLocalizedString("audience", tableName: "Requests", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Authorization
+      static func authorization(_: Void = ()) -> String {
+        return NSLocalizedString("authorization", tableName: "Requests", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: User-Agent
+      static func userAgent(_: Void = ()) -> String {
+        return NSLocalizedString("userAgent", tableName: "Requests", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
+  }
+  
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

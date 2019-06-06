@@ -15,6 +15,12 @@ private typealias Routes = Closable
 class RegisterVC: BaseVC, Routes {
 	
 	// MARK: Outlets
+	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var checkPasswordTextField: UITextField!
+	@IBOutlet weak var registerButton: ShadowButton!
+	@IBOutlet weak var loginButton: ShadowButton!
+	@IBOutlet weak var scrollView: UIScrollView!
 	
 	// MARK: Fields
 	
@@ -22,13 +28,30 @@ class RegisterVC: BaseVC, Routes {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setTitle(R.string.localizable.registration())
+		subscribeToKeyboard(scrollView)
+		setListeners()
 	}
 	
 	// MARK: Functionality
+	func setListeners() {
+		registerButton.rx.tapGesture().when(.recognized).bind { _ in
+			let credentials = Credentials(email: self.emailTextField.text!,
+																		password: self.passwordTextField.text!)
+			self.registerRequest(credentials)
+		}.disposed(by: disposeBag)
+		
+		loginButton.rx.tapGesture().when(.recognized).bind { _ in
+			self.close()
+		}.disposed(by: disposeBag)
+	}
 }
 
 // MARK: Networking
 extension RegisterVC {
-	
+	func registerRequest(_ credentials: Credentials) {
+		print("REGISTER REQUEST IS")
+		subscribeWith(response: request.registerRequest(credentials: credentials)) { response in
+			print(response)
+		}
+	}
 }
-

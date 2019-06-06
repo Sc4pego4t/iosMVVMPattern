@@ -119,6 +119,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aJm-hx-tLh"/>
                     </view>
+                    <connections>
+                        <outlet property="checkPasswordTextField" destination="Km1-qq-P6M" id="W3s-Rg-pvK"/>
+                        <outlet property="emailTextField" destination="wLw-72-FwX" id="Mhj-xv-Inf"/>
+                        <outlet property="loginButton" destination="cU1-ea-DFh" id="HTt-Si-5JW"/>
+                        <outlet property="passwordTextField" destination="Esp-e8-Q7Y" id="1XM-wU-Jrb"/>
+                        <outlet property="registerButton" destination="4iZ-xc-nGr" id="OGZ-an-hXL"/>
+                        <outlet property="scrollView" destination="2be-EW-ctb" id="Gwf-aA-C9o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTg-EF-Uf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

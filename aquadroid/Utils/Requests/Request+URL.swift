@@ -11,10 +11,7 @@ import Foundation
 extension Request {
 	
 	enum DomainsURL {
-		static let domain = "http://api.events4me.iac.spb.ru/"
-		//    static let domain = "http://api.test.events4me.iac.spb.ru/"
-		//    static let localDomain = "http://api.test.events4me.iac.spb.ru/"
-		//    "http://192.168.43.15:8080/"
+		static let domain = "http://192.168.43.82:8080/"
 	}
 	
 	enum AutorizationURL {

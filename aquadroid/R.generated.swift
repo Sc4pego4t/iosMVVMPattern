@@ -277,7 +277,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct registerVC: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UIViewController
+      typealias InitialController = RegisterVC
       
       let bundle = R.hostingBundle
       let name = "RegisterVC"

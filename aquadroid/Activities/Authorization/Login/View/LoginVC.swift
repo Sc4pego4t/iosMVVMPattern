@@ -27,7 +27,7 @@ class LoginVC: BaseVC, Routes {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setTitle(R.string.localizable.logIn())
-		registerForKeyboardNotifications(scrollView: scrollView)
+		subscribeToKeyboard(scrollView)
 		setListeners()
 	}
 	

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3i9-wy-fJc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RegisterVC-->
+        <scene sceneID="Dcv-6l-4uU">
+            <objects>
+                <viewController id="3i9-wy-fJc" customClass="RegisterVC" customModule="aquadroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1y-ma-1K8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="2be-EW-ctb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="821-39-9fy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-mj-KbT">
+                                                <rect key="frame" x="82" y="257" width="250" height="304"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLw-72-FwX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="250" id="0r0-q8-ACF"/>
+                                                            <constraint firstAttribute="height" constant="40" id="i3U-d6-gcx"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esp-e8-Q7Y">
+                                                        <rect key="frame" x="0.0" y="70" width="250" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Km1-qq-P6M">
+                                                        <rect key="frame" x="0.0" y="140" width="250" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-AZ-baY">
+                                                        <rect key="frame" x="0.0" y="210" width="250" height="94"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-xc-nGr" customClass="ShadowButton" customModule="aquadroid" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="V6g-RQ-rSt"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Зарегистрироваться"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-ea-DFh" customClass="ShadowButton" customModule="aquadroid" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="54" width="250" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <size key="titleShadowOffset" width="10" height="10"/>
+                                                                <state key="normal" title="Войти"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="cU1-ea-DFh" firstAttribute="width" secondItem="4iZ-xc-nGr" secondAttribute="width" id="jxv-9O-Y9i"/>
+                                                            <constraint firstItem="cU1-ea-DFh" firstAttribute="height" secondItem="4iZ-xc-nGr" secondAttribute="height" id="ql2-Or-U8H"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Esp-e8-Q7Y" firstAttribute="height" secondItem="wLw-72-FwX" secondAttribute="height" id="2gV-EW-GNh"/>
+                                                    <constraint firstItem="Km1-qq-P6M" firstAttribute="width" secondItem="Esp-e8-Q7Y" secondAttribute="width" id="MkL-iF-698"/>
+                                                    <constraint firstItem="Esp-e8-Q7Y" firstAttribute="width" secondItem="wLw-72-FwX" secondAttribute="width" id="Tgo-eg-qV2"/>
+                                                    <constraint firstItem="Km1-qq-P6M" firstAttribute="height" secondItem="Esp-e8-Q7Y" secondAttribute="height" id="b2y-QF-OWs"/>
+                                                    <constraint firstItem="4iZ-xc-nGr" firstAttribute="width" secondItem="Esp-e8-Q7Y" secondAttribute="width" id="s55-uW-D19"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="jV1-mj-KbT" firstAttribute="centerX" secondItem="821-39-9fy" secondAttribute="centerX" id="O3k-Oe-k0X"/>
+                                            <constraint firstItem="jV1-mj-KbT" firstAttribute="centerY" secondItem="821-39-9fy" secondAttribute="centerY" id="Stq-y7-wqc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="821-39-9fy" secondAttribute="bottom" id="1Hi-zC-KW2"/>
+                                    <constraint firstAttribute="trailing" secondItem="821-39-9fy" secondAttribute="trailing" id="4Fs-Fw-GPV"/>
+                                    <constraint firstItem="821-39-9fy" firstAttribute="top" secondItem="2be-EW-ctb" secondAttribute="top" id="PMt-Wo-O1h"/>
+                                    <constraint firstItem="821-39-9fy" firstAttribute="leading" secondItem="2be-EW-ctb" secondAttribute="leading" id="URb-Py-c1o"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aJm-hx-tLh" firstAttribute="bottom" secondItem="2be-EW-ctb" secondAttribute="bottom" id="6KH-br-KAK"/>
+                            <constraint firstItem="2be-EW-ctb" firstAttribute="leading" secondItem="aJm-hx-tLh" secondAttribute="leading" id="GS3-bG-kQY"/>
+                            <constraint firstItem="2be-EW-ctb" firstAttribute="top" secondItem="V1y-ma-1K8" secondAttribute="top" id="OSX-YY-Wju"/>
+                            <constraint firstItem="821-39-9fy" firstAttribute="height" secondItem="aJm-hx-tLh" secondAttribute="height" id="QfE-E2-8xP"/>
+                            <constraint firstItem="821-39-9fy" firstAttribute="width" secondItem="aJm-hx-tLh" secondAttribute="width" id="cbK-g2-SMZ"/>
+                            <constraint firstItem="2be-EW-ctb" firstAttribute="trailing" secondItem="aJm-hx-tLh" secondAttribute="trailing" id="v6i-nB-EfH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aJm-hx-tLh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTg-EF-Uf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="-155"/>
+        </scene>
+    </scenes>
+</document>

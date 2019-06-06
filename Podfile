@@ -12,6 +12,7 @@ target 'aquadroid' do
 	pod 'SwiftLint'
 	pod 'RealmSwift'
 	pod 'RxGesture'
+	pod 'RxKeyboard'
   # Pods for aquadroid
 
 end

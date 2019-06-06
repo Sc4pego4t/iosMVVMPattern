@@ -19,6 +19,9 @@ PODS:
   - RxGesture (3.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - RxAlamofire
   - RxCocoa
   - RxGesture
+  - RxKeyboard
   - RxSwift
   - SwiftLint
 
@@ -44,6 +48,7 @@ SPEC REPOS:
     - RxAlamofire
     - RxCocoa
     - RxGesture
+    - RxKeyboard
     - RxRelay
     - RxSwift
     - SwiftLint
@@ -57,10 +62,11 @@ SPEC CHECKSUMS:
   RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxGesture: 0cd8e37ff9a266e1c31f46bcaed6de1c536bc81e
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
 
-PODFILE CHECKSUM: bcbba664fc836631f7e6805cb9bf1053b2112240
+PODFILE CHECKSUM: d51f87f9987511f7368569325b5065f500df2fbe
 
 COCOAPODS: 1.7.0

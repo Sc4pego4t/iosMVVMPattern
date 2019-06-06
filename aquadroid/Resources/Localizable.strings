@@ -9,3 +9,21 @@
 //user errors
 "decodingError" = "Unable to get data";
 "encodingError" = "Unable to encode data";
+
+//titles
+"logIn" = "Вход";
+"registration" = "Регистрация";
+
+//dialogs
+"oups" = "Упс";
+"message" = "Сообщение";
+"coordinatesNotSpecified" = "К сожалению создатель конференции не указал точные координаты конференции";
+"resultsNotFound" = "Результатов не найдено";
+"lackOfSectionName" = "Название одной из секций отсутствует, добавьте или удалите секцию";
+"loginBiometrics" = "Для входа в аккаунт идентифицируйтесь";
+"error" = "Ошибка";
+"wrongBiometrics" = "Невозможно идентифицировать пользователя по введенным данным";
+"cantLoginWithBiometrics" = "Невозможно авторизоваться с помощью индентификации, введите данные снова";
+"serverError" = "Что то пошло не так, повторите позже";
+"ok" = "Ок";
+"routeError" = "Невозможно перейти на данный экран";

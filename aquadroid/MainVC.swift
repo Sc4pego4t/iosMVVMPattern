@@ -8,13 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainVC: BaseVC, Loginable {
+	
+	// MARK: Outlets
+	
+	// MARK: Fields
+	
+	// MARK: Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
 	}
-
-
+	
+	// MARK: Functionality
 }
 
+// MARK: Networking
+extension LoginVC {
+	
+}

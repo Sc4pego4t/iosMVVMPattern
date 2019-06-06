@@ -12,6 +12,10 @@ import Alamofire
 class Request {
 	
 	static let mockImageName = "image.jpg"
+	static let shared = Request()
+	
+	// Make our constructor private to make class singleton
+	private init() { }
 	
 	func asDictionary<EncodableValue: Encodable>(data: EncodableValue) throws -> [String: Any] {
 		let data = try JSONEncoder().encode(data)

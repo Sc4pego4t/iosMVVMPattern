@@ -1,25 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uu-Mg-gAv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uu-Mg-gAv">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RestoreVC-->
         <scene sceneID="2IP-K4-ml9">
             <objects>
-                <viewController id="9uu-Mg-gAv" sceneMemberID="viewController">
+                <viewController id="9uu-Mg-gAv" customClass="RestoreVC" customModule="aquadroid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i4i-Aq-fKH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="7J9-0A-fIL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-Ok-08U">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LPL-8B-NGh">
+                                                <rect key="frame" x="82" y="327" width="250" height="164"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mi-Q4-QkC" customClass="ErrorTextField" customModule="aquadroid" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="B69-7X-Mi2"/>
+                                                            <constraint firstAttribute="width" constant="250" id="rfX-6Q-qSf"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-3X-6Xc">
+                                                        <rect key="frame" x="0.0" y="70" width="250" height="94"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUv-rZ-oQj" customClass="ShadowButton" customModule="aquadroid" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="Nqz-tX-7tx"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Восстановить"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLQ-gM-vNV" customClass="ShadowButton" customModule="aquadroid" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="54" width="250" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <size key="titleShadowOffset" width="10" height="10"/>
+                                                                <state key="normal" title="Войти"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="zLQ-gM-vNV" firstAttribute="height" secondItem="tUv-rZ-oQj" secondAttribute="height" id="PMy-Kd-1GH"/>
+                                                            <constraint firstItem="zLQ-gM-vNV" firstAttribute="width" secondItem="tUv-rZ-oQj" secondAttribute="width" id="Stx-0E-4mw"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LPL-8B-NGh" firstAttribute="centerX" secondItem="Y0A-Ok-08U" secondAttribute="centerX" id="ScE-iQ-cYR"/>
+                                            <constraint firstItem="LPL-8B-NGh" firstAttribute="centerY" secondItem="Y0A-Ok-08U" secondAttribute="centerY" id="kQW-of-80W"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Y0A-Ok-08U" secondAttribute="bottom" id="86L-Um-C0F"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0A-Ok-08U" secondAttribute="trailing" id="8XI-Yl-aPq"/>
+                                    <constraint firstItem="Y0A-Ok-08U" firstAttribute="top" secondItem="7J9-0A-fIL" secondAttribute="top" id="HAR-j8-xcl"/>
+                                    <constraint firstItem="Y0A-Ok-08U" firstAttribute="leading" secondItem="7J9-0A-fIL" secondAttribute="leading" id="pZV-Zw-78A"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y0A-Ok-08U" firstAttribute="width" secondItem="lnW-DZ-9Vo" secondAttribute="width" id="2no-Ky-llM"/>
+                            <constraint firstItem="7J9-0A-fIL" firstAttribute="leading" secondItem="lnW-DZ-9Vo" secondAttribute="leading" id="2qB-oF-eHu"/>
+                            <constraint firstItem="lnW-DZ-9Vo" firstAttribute="bottom" secondItem="7J9-0A-fIL" secondAttribute="bottom" id="6fz-ZA-nZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="7J9-0A-fIL" secondAttribute="trailing" id="Byn-fv-99o"/>
+                            <constraint firstItem="Y0A-Ok-08U" firstAttribute="height" secondItem="lnW-DZ-9Vo" secondAttribute="height" priority="750" id="gby-nH-du8"/>
+                            <constraint firstItem="7J9-0A-fIL" firstAttribute="top" secondItem="i4i-Aq-fKH" secondAttribute="top" id="jhQ-cc-ISQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lnW-DZ-9Vo"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="3mi-Q4-QkC" id="0ta-EQ-Vnc"/>
+                        <outlet property="loginButton" destination="zLQ-gM-vNV" id="wWZ-Kt-1mw"/>
+                        <outlet property="restoreButton" destination="tUv-rZ-oQj" id="Vxh-hL-L0l"/>
+                        <outlet property="scrollView" destination="7J9-0A-fIL" id="uZR-R4-bWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="663-7c-UyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

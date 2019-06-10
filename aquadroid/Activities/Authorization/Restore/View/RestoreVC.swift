@@ -1,35 +1,31 @@
 //
-//  LoginVC.swift
+//  RestoreVC.swift
 //  aquadroid
 //
-//  Created by Андрей Глухих on 05/06/2019.
+//  Created by Andrey on 10/06/2019.
 //  Copyright © 2019 Андрей Глухих. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import RxCocoa
 import RxKeyboard
 // MARK: Route
 // where this viewController can go
 private typealias Routes = RestoreRoute & RegisterRoute & Closable
 
-class LoginVC: BaseVC, Routes, Validatable {
-
+class RestoreVC: BaseVC, Routes, Validatable {
+	
 	// MARK: Outlets
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var emailTextField: ErrorTextField!
-	@IBOutlet weak var passwordTextField: ErrorTextField!
 	@IBOutlet weak var loginButton: ShadowButton!
-	@IBOutlet weak var registerButton: ShadowButton!
-	@IBOutlet weak var formStackView: UIStackView!
 	@IBOutlet weak var restoreButton: UIButton!
-	
+
 	// MARK: Fields
-	let viewModel = LoginVM()
-	var credentials = BehaviorRelay<Credentials>(value: Credentials())
+	let viewModel = RestoreVM()
+	var email = BehaviorRelay<String>(value: "")
 	lazy var fieldsDictionary: [TextFieldType: ErrorTextField] = [
-		.email: emailTextField,
-		.password: passwordTextField
+		.email: emailTextField
 	]
 	
 	// MARK: Life Cycle
@@ -40,45 +36,39 @@ class LoginVC: BaseVC, Routes, Validatable {
 		setListeners()
 		setBindings()
 	}
-
+	
 	// MARK: Functionality
 	func setListeners() {
 		loginButton.rx.tapGesture().when(.recognized).bind { _ in
-			self.loginRequest()
-		}.disposed(by: disposeBag)
-		
-		registerButton.rx.tapGesture().when(.recognized).bind { _ in
-			self.openRegister()
+			self.close()
 		}.disposed(by: disposeBag)
 		
 		restoreButton.rx.tapGesture().when(.recognized).bind { _ in
-			self.openRestore()
+			self.restoreRequest()
 		}.disposed(by: disposeBag)
 	}
 	
 	func setBindings() {
 		let email = emailTextField.rx.text.orEmpty.asObservable()
-		let password = passwordTextField.rx.text.orEmpty.asObservable()
-
-		viewModel.credentials.bind(to: credentials).disposed(by: disposeBag)
 		
-		viewModel.checkButtonValid(email: email, password: password)
-			.bind(to: loginButton.rx.isEnabled)
+		viewModel.email.bind(to: self.email).disposed(by: disposeBag)
+		
+		viewModel.checkButtonValid(email: email)
+			.bind(to: restoreButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 		
 		viewModel.errorPublisher.bind { errors in
 			self.setupTextFields(errors)
-		}.disposed(by: disposeBag)
+			}.disposed(by: disposeBag)
 	}
 }
 
 // MARK: Networking
-extension LoginVC {
-	func loginRequest() {
+extension RestoreVC {
+	func restoreRequest() {
 		showLoading()
-		subscribeWith(response: request.loginRequest(credentials: credentials.value)) { response in
-			self.authHelper.saveToken(response)
-			self.close()
+		subscribeWith(response: request.restoreRequest(email: email.value)) { response in
+//			self.close()
 		}
 	}
 }

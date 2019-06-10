@@ -22,14 +22,14 @@ class BaseVC: UIViewController, LoginRoute {
 	// Abstact class for working with network
 	var request = Request.shared
 	// Action on Done button on Keyboard
-	var keyboardReturnAction: () -> Void = { }
+	lazy var keyboardReturnAction: () -> Void = { }
 	// View which showed on loading
 	lazy var shadowView: UIView = {
 		let shadowView = UIView(frame: UIScreen.main.bounds)
 		
 		shadowView.backgroundColor = .blurColor
 		
-		let loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
+		let loadingIndicator = UIActivityIndicatorView(style: .white)
 		loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
 		shadowView.addSubview(loadingIndicator)
 		

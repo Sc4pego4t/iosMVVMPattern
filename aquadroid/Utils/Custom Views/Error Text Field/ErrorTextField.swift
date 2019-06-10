@@ -20,14 +20,13 @@ class ErrorTextField: UITextField {
 		return errorButton
 	}()
 	
-	// MARK: Error Button Appereance
+	// Fields for error button appereance
 	let size: CGFloat = 20
 	let offset: CGFloat = 10
 	
 	var tipView = TipView()
 	var disposeBag = DisposeBag()
 	
-	// MARL: Functionality
 	func showError(_ message: String, parentView: UIView) {
 		disposeBag = DisposeBag()
 		

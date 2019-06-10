@@ -1,15 +1,15 @@
 //
-//  LoginViewModel.swift
+//  RegisterVM.swift
 //  aquadroid
 //
-//  Created by Андрей Глухих on 07/06/2019.
+//  Created by Andrey on 10/06/2019.
 //  Copyright © 2019 Андрей Глухих. All rights reserved.
 //
 
+import Foundation
 import RxSwift
-import RxCocoa
 
-class LoginVM: BaseVM {
+class RegisterVM: BaseVM {
 	// MARK: Fields
 	// Sends data for server request
 	let credentials = PublishSubject<Credentials>()
@@ -21,8 +21,9 @@ class LoginVM: BaseVM {
 	// also publish all errors with help of errorPublisher
 	// and update value of credentials
 	func checkButtonValid(email: Observable<String>,
-												password: Observable<String>) -> Observable<Bool> {
-		return Observable.combineLatest(email, password) { (email, password) in
+												password: Observable<String>,
+												checkPassword: Observable<String>) -> Observable<Bool> {
+		return Observable.combineLatest(email, password, checkPassword) { (email, password, checkPassword) in
 			
 			var errors = [TextFieldError]()
 			
@@ -34,8 +35,12 @@ class LoginVM: BaseVM {
 				errors.append(error)
 			}
 			
+			if let error = ValidationHelper.shared.checkPasswordError(password, str2: checkPassword) {
+				errors.append(error)
+			}
+			
 			self.errorPublisher.onNext(errors)
-
+			
 			if errors.isEmpty {
 				self.credentials.onNext(Credentials(email: email, password: password))
 				return true

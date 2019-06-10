@@ -6,7 +6,7 @@ disabled_rules:
 excluded:
 - Carthage
 - Pods
-- aquadroid/R.generated.swift
+- aquadroid/Resources/R.generated.swift
 - aquadroid/Utils/Extensions/+UIDevice.swift
 
 identifier_name:

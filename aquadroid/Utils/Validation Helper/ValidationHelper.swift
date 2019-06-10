@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum ErrorType {
+enum TextFieldType {
 	case email, password, checkPassword
 }
 
-typealias TextFieldError = (message: String, error: ErrorType)
+typealias TextFieldError = (message: String, type: TextFieldType)
 
 class ValidationHelper {
 	

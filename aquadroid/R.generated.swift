@@ -16,6 +16,19 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `error`.
+    static let error = Rswift.ImageResource(bundle: R.hostingBundle, name: "error")
+    
+    /// `UIImage(named: "error", bundle: ..., traitCollection: ...)`
+    static func error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.error, compatibleWith: traitCollection)
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
@@ -59,7 +72,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
     struct localizable {
       /// Value: Unable to encode data
       static let encodingError = Rswift.StringResource(key: "encodingError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -73,6 +86,8 @@ struct R: Rswift.Validatable {
       static let coordinatesNotSpecified = Rswift.StringResource(key: "coordinatesNotSpecified", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Название одной из секций отсутствует, добавьте или удалите секцию
       static let lackOfSectionName = Rswift.StringResource(key: "lackOfSectionName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Неверный формат электронной почты
+      static let emailError = Rswift.StringResource(key: "emailError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Невозможно авторизоваться с помощью индентификации, введите данные снова
       static let cantLoginWithBiometrics = Rswift.StringResource(key: "cantLoginWithBiometrics", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Невозможно идентифицировать пользователя по введенным данным
@@ -83,6 +98,10 @@ struct R: Rswift.Validatable {
       static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ошибка
       static let error = Rswift.StringResource(key: "error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Пароли не совпадают
+      static let checkPasswordError = Rswift.StringResource(key: "checkPasswordError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Пароль должен содержать более 5 символов
+      static let passwordError = Rswift.StringResource(key: "passwordError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Регистрация
       static let registration = Rswift.StringResource(key: "registration", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Результатов не найдено
@@ -124,6 +143,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("lackOfSectionName", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Неверный формат электронной почты
+      static func emailError(_: Void = ()) -> String {
+        return NSLocalizedString("emailError", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Невозможно авторизоваться с помощью индентификации, введите данные снова
       static func cantLoginWithBiometrics(_: Void = ()) -> String {
         return NSLocalizedString("cantLoginWithBiometrics", bundle: R.hostingBundle, comment: "")
@@ -147,6 +171,16 @@ struct R: Rswift.Validatable {
       /// Value: Ошибка
       static func error(_: Void = ()) -> String {
         return NSLocalizedString("error", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Пароли не совпадают
+      static func checkPasswordError(_: Void = ()) -> String {
+        return NSLocalizedString("checkPasswordError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Пароль должен содержать более 5 символов
+      static func passwordError(_: Void = ()) -> String {
+        return NSLocalizedString("passwordError", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Регистрация

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="vrh-MP-ZW0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVS-9u-1KO">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
@@ -27,7 +27,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-X3-FpK">
                                                 <rect key="frame" x="82" y="292" width="250" height="234"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-Ut-9Ys">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-Ut-9Ys" customClass="ErrorTextField" customModule="aquadroid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="250" id="6wF-WN-4yv"/>
@@ -35,13 +35,19 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8Xw-Gj-l2W" id="nj3-jY-KfO"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-k5-7fA">
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-k5-7fA" customClass="ErrorTextField" customModule="aquadroid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70" width="250" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8Xw-Gj-l2W" id="SPM-dO-nS3"/>
+                                                        </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-hr-AXc">
                                                         <rect key="frame" x="0.0" y="140" width="250" height="94"/>
@@ -104,7 +110,7 @@
                         <constraints>
                             <constraint firstItem="vrh-MP-ZW0" firstAttribute="leading" secondItem="nvZ-9m-hhB" secondAttribute="leading" id="7pJ-fV-ZfD"/>
                             <constraint firstItem="aVS-9u-1KO" firstAttribute="height" secondItem="nvZ-9m-hhB" secondAttribute="height" priority="750" id="KW4-MV-Pjv"/>
-                            <constraint firstItem="vrh-MP-ZW0" firstAttribute="top" secondItem="nvZ-9m-hhB" secondAttribute="top" id="YwC-OW-otJ"/>
+                            <constraint firstItem="vrh-MP-ZW0" firstAttribute="top" secondItem="Lsh-Rd-ofn" secondAttribute="top" id="YwC-OW-otJ"/>
                             <constraint firstItem="nvZ-9m-hhB" firstAttribute="bottom" secondItem="vrh-MP-ZW0" secondAttribute="bottom" id="grj-y7-C1a"/>
                             <constraint firstItem="nvZ-9m-hhB" firstAttribute="trailing" secondItem="vrh-MP-ZW0" secondAttribute="trailing" id="p4Z-jH-93W"/>
                             <constraint firstItem="aVS-9u-1KO" firstAttribute="width" secondItem="Lsh-Rd-ofn" secondAttribute="width" id="tKq-zZ-jB3"/>
@@ -113,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="3lb-Ut-9Ys" id="RI0-Wg-t1T"/>
+                        <outlet property="formStackView" destination="Loi-X3-FpK" id="Hdu-lJ-f2U"/>
                         <outlet property="loginButton" destination="hZF-gr-WLW" id="zR8-gg-biF"/>
                         <outlet property="passwordTextField" destination="Qir-k5-7fA" id="PDQ-9b-Quc"/>
                         <outlet property="registerButton" destination="RzQ-pt-iQp" id="wHg-6h-kNQ"/>

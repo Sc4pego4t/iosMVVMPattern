@@ -11,11 +11,10 @@ import UIKit
 // view controller which implement this, can close itself just with method:
 // close()
 protocol Closable {
-	func close()
 }
 
 extension Closable where Self: UIViewController {
-	func close() {
-		self.navigationController?.popViewController(animated: true)
+	func close(howMuchVCToClose count: Int = 1) {
+		self.navigationController?.popViewControllers(viewsToPop: count)
 	}
 }

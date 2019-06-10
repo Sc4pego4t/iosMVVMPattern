@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxCocoa
 
 // MARK: Route
 // where this viewController can go
@@ -16,12 +17,19 @@ class LoginVC: BaseVC, Routes {
 
 	// MARK: Outlets
 	@IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var emailTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var emailTextField: ErrorTextField!
+	@IBOutlet weak var passwordTextField: ErrorTextField!
 	@IBOutlet weak var loginButton: ShadowButton!
 	@IBOutlet weak var registerButton: ShadowButton!
+	@IBOutlet weak var formStackView: UIStackView!
 	
 	// MARK: Fields
+	let viewModel = LoginVM()
+	var credentials = BehaviorRelay<Credentials>(value: Credentials())
+	lazy var fieldsDictionary: [ErrorType: ErrorTextField] = [
+		.email: emailTextField,
+		.password: passwordTextField
+	]
 	
 	// MARK: Life Cycle
 	override func viewDidLoad() {
@@ -29,29 +37,56 @@ class LoginVC: BaseVC, Routes {
 		setTitle(R.string.localizable.logIn())
 		subscribeToKeyboard(scrollView)
 		setListeners()
+		setBindings()
+		keyboardReturnAction = { self.loginRequest() }
 	}
-	
+
 	// MARK: Functionality
 	func setListeners() {
 		loginButton.rx.tapGesture().when(.recognized).bind { _ in
-			let credentials = Credentials(email: self.emailTextField.text!,
-																		password: self.passwordTextField.text!)
-			self.loginRequest(credentials: credentials)
+			self.loginRequest()
 		}.disposed(by: disposeBag)
 		
 		registerButton.rx.tapGesture().when(.recognized).bind { _ in
 			self.openRegister()
 		}.disposed(by: disposeBag)
+	}
+	
+	func setBindings() {
+		let email = emailTextField.rx.text.orEmpty.asObservable()
+		let password = passwordTextField.rx.text.orEmpty.asObservable()
+
+		viewModel.credentials.bind(to: credentials).disposed(by: disposeBag)
 		
+		viewModel.checkButtonValid(email: email, password: password)
+			.bind(to: loginButton.rx.isEnabled)
+			.disposed(by: disposeBag)
+		
+		viewModel.errorPublisher.bind { errors in
+			self.setupTextFields(errors)
+		}.disposed(by: disposeBag)
+	}
+	
+	func setupTextFields(_ errors: [(String, ErrorType)]) {
+		fieldsDictionary.keys.forEach { key in
+			if !errors.contains { $0.1 == key } {
+				fieldsDictionary[key]?.hideError()
+			}
+		}
+		
+		errors.forEach { error in
+			fieldsDictionary[error.1]?.showError(error.0, parentView: view)
+		}
 	}
 }
 
 // MARK: Networking
 extension LoginVC {
-	func loginRequest(credentials: Credentials) {
-		subscribeWith(response: request.loginRequest(credentials: credentials)) { response in
-			print(response)
+	func loginRequest() {
+		showLoading()
+		subscribeWith(response: request.loginRequest(credentials: credentials.value)) { response in
+			self.authHelper.saveToken(response)
+			self.close()
 		}
-		
 	}
 }

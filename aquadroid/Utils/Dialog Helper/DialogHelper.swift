@@ -78,4 +78,8 @@ class DialogHelper {
 	func showRequestError() {
 		showDialog(withTitle: R.string.localizable.error(), andMessage: R.string.localizable.serverError())
 	}
+	
+	func showError() {
+		
+	}
 }

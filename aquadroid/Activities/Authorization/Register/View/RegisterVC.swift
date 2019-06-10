@@ -49,9 +49,9 @@ class RegisterVC: BaseVC, Routes {
 // MARK: Networking
 extension RegisterVC {
 	func registerRequest(_ credentials: Credentials) {
-		print("REGISTER REQUEST IS")
 		subscribeWith(response: request.registerRequest(credentials: credentials)) { response in
-			print(response)
+			self.authHelper.saveToken(response)
+			self.close(howMuchVCToClose: 2)
 		}
 	}
 }

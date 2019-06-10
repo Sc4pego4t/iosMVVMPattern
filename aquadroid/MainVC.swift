@@ -11,7 +11,8 @@ import UIKit
 class MainVC: BaseVC, Loginable {
 	
 	// MARK: Outlets
-	
+	@IBOutlet weak var tipView: TipView!
+	@IBOutlet weak var blackView: UIView!
 	// MARK: Fields
 	
 	// MARK: Life Cycle

@@ -11,20 +11,10 @@ import Foundation
 class AuthorizationHelper {
 	
 	private var userDefault = UserDefaults.standard
-	private static let instance = AuthorizationHelper()
+	static let shared = AuthorizationHelper()
 	
 	private init() {}
 	private init(userDefault: UserDefaults) {}
-	
-	class func shared() -> AuthorizationHelper {
-		// if we are in test, change userDefault from standart to test,
-		// it's due to do not affect app data
-		if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
-			instance.userDefault = UserDefaults(suiteName: "test")!
-		}
-		
-		return instance
-	}
 	
 	/// Fuctions checks are user authorized
 	/// and his token is up-to-date

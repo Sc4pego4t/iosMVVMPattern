@@ -15,4 +15,10 @@ struct Credentials: Equatable, Codable {
 	static func == (lhs: Credentials, rhs: Credentials) -> Bool {
 		return lhs.email == rhs.email && lhs.password == rhs.password
 	}
+	
+	init(email: String = "",
+			 password: String = "") {
+		self.email = email
+		self.password = password
+	}
 }

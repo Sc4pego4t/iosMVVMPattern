@@ -9,6 +9,9 @@
 //user errors
 "decodingError" = "Unable to get data";
 "encodingError" = "Unable to encode data";
+"passwordError" = "Пароль должен содержать более 5 символов";
+"emailError" = "Неверный формат электронной почты";
+"checkPasswordError" = "Пароли не совпадают";
 
 //titles
 "logIn" = "Вход";
@@ -27,3 +30,4 @@
 "serverError" = "Что то пошло не так, повторите позже";
 "ok" = "Ок";
 "routeError" = "Невозможно перейти на данный экран";
+//"" = "Что то пошло не по плану, попробуйте снова"

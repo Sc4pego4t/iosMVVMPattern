@@ -23,7 +23,7 @@ class RequestCreator {
 		temp[R.string.requests.audience()] = "iOS"
 		temp[R.string.requests.userAgent()] = String(UIDevice().type, UIDevice.current.systemVersion, UIDevice.current.identifierForVendor!.uuidString)
 		
-		if AuthorizationHelper.shared().isAuthorized(), let token = AuthorizationHelper.shared().getStringToken() {
+		if AuthorizationHelper.shared.isAuthorized(), let token = AuthorizationHelper.shared.getStringToken() {
 			temp[R.string.requests.authorization()] = token
 		}
 		

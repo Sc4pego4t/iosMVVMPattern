@@ -30,7 +30,11 @@ class ErrorTextField: UITextField {
 	// MARL: Functionality
 	func showError(_ message: String, parentView: UIView) {
 		disposeBag = DisposeBag()
-		parentView.addSubview(errorButton)
+		
+		// check, to do not add it twice
+		if errorButton.superview == nil {
+			parentView.addSubview(errorButton)
+		}
 		
 		NSLayoutConstraint.activate([
 			errorButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),

@@ -8,24 +8,30 @@
 
 import UIKit
 
+enum ErrorType {
+	case email, password, checkPassword
+}
+
+typealias TextFieldError = (message: String, error: ErrorType)
+
 class ValidationHelper {
 	
 	static var shared = ValidationHelper()
 	
 	private init() { }
 	
-	func emailError(_ str: String) -> String? {
+	func emailError(_ str: String) -> TextFieldError? {
 		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 		
 		let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-		return emailTest.evaluate(with: str) ? nil : R.string.localizable.emailError()
+		return emailTest.evaluate(with: str) ? nil : (R.string.localizable.emailError(), .email)
 	}
 	
-	func passwordError(_ str: String) -> String? {
-		return str.count > 5 ? nil : R.string.localizable.passwordError()
+	func passwordError(_ str: String) -> TextFieldError? {
+		return str.count > 5 ? nil : (R.string.localizable.passwordError(), .password)
 	}
 	
-	func checkPasswordError(_ str1: String, str2: String) -> String? {
-		return str1 == str2 ? nil : R.string.localizable.checkPasswordError()
+	func checkPasswordError(_ str1: String, str2: String) -> TextFieldError? {
+		return str1 == str2 ? nil : (R.string.localizable.checkPasswordError(), .checkPassword)
 	}
 }

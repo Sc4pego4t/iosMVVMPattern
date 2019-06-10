@@ -67,15 +67,16 @@ class LoginVC: BaseVC, Routes {
 		}.disposed(by: disposeBag)
 	}
 	
-	func setupTextFields(_ errors: [(String, ErrorType)]) {
+	// Show errors or hide them in the textFields
+	func setupTextFields(_ errors: [TextFieldError]) {
 		fieldsDictionary.keys.forEach { key in
-			if !errors.contains { $0.1 == key } {
+			if !errors.contains { $0.error == key } {
 				fieldsDictionary[key]?.hideError()
 			}
 		}
 		
 		errors.forEach { error in
-			fieldsDictionary[error.1]?.showError(error.0, parentView: view)
+			fieldsDictionary[error.error]?.showError(error.message, parentView: view)
 		}
 	}
 }

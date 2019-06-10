@@ -9,25 +9,21 @@
 import RxSwift
 import RxCocoa
 
-enum ErrorType {
-	case email, password
-}
-
 class LoginVM: BaseVM {
 	let credentials = PublishSubject<Credentials>()
-	let errorPublisher = PublishSubject<[(String, ErrorType)]>()
+	let errorPublisher = PublishSubject<[TextFieldError]>()
 	
 	func checkButtonValid(email: Observable<String>,
 												password: Observable<String>) -> Observable<Bool> {
 		return Observable.combineLatest(email, password) { (email, password) in
 			
-			var errors = [(String, ErrorType)]()
+			var errors = [TextFieldError]()
 			if let error = ValidationHelper.shared.emailError(email) {
-				errors.append((error, .email))
+				errors.append(error)
 			}
 			
 			if let error = ValidationHelper.shared.passwordError(password) {
-				errors.append((error, .password))
+				errors.append(error)
 			}
 			
 			self.errorPublisher.onNext(errors)

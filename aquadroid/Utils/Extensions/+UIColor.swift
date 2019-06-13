@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIColor {
-	static var blurColor = UIColor(white: 0, alpha: 0.3)
+	static var blur = UIColor(white: 0, alpha: 0.3)
 }

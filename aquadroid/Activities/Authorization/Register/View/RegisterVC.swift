@@ -43,13 +43,13 @@ class RegisterVC: BaseVC, Routes, Validatable {
 	
 	// MARK: Functionality
 	func setListeners() {
-		registerButton.rx.tapGesture().when(.recognized).bind { _ in
+		registerButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			let credentials = Credentials(email: self.emailTextField.text!,
 																		password: self.passwordTextField.text!)
 			self.registerRequest(credentials)
 		}.disposed(by: disposeBag)
 		
-		loginButton.rx.tapGesture().when(.recognized).bind { _ in
+		loginButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.close()
 		}.disposed(by: disposeBag)
 	}
@@ -65,7 +65,7 @@ class RegisterVC: BaseVC, Routes, Validatable {
 			.bind(to: registerButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 		
-		viewModel.errorPublisher.bind { errors in
+		viewModel.errorPublisher.bind { [unowned self] errors in
 			self.setupTextFields(errors)
 			}.disposed(by: disposeBag)
 	}

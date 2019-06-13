@@ -16,12 +16,12 @@ class DialogHelper {
 		self.controller = controller
 	}
 	
-	func showDialog(withTitle title: String, andMessage message: String) {
+	func showDialog(withTitle title: String, andMessage message: String, withCompletion completion: @escaping () -> Void = {}) {
 		
 		let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		alertController.addAction(UIAlertAction(title: R.string.localizable.ok(), style: .default, handler: nil))
-		controller?.present(alertController, animated: true, completion: nil)
-		
+
+		controller.present(alertController, animated: true, completion: completion)
 	}
 	
 	func showDialog(withTitle title: String, andMessages messages: [String]) {
@@ -60,14 +60,6 @@ class DialogHelper {
 		}
 		
 		showDialog(withTitle: title, andMessage: message)
-		
-	}
-	
-	func showDialog(withTitle title: String, andMessage message: String, withCompletion completion: @escaping () -> Void) {
-		
-		let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		alertController.addAction(UIAlertAction(title: R.string.localizable.ok(), style: .default, handler: nil))
-		controller.present(alertController, animated: true, completion: completion)
 		
 	}
 	

@@ -39,11 +39,11 @@ class RestoreVC: BaseVC, Routes, Validatable {
 	
 	// MARK: Functionality
 	func setListeners() {
-		loginButton.rx.tapGesture().when(.recognized).bind { _ in
+		loginButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.close()
 		}.disposed(by: disposeBag)
 		
-		restoreButton.rx.tapGesture().when(.recognized).bind { _ in
+		restoreButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.restoreRequest()
 		}.disposed(by: disposeBag)
 	}
@@ -57,7 +57,7 @@ class RestoreVC: BaseVC, Routes, Validatable {
 			.bind(to: restoreButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 		
-		viewModel.errorPublisher.bind { errors in
+		viewModel.errorPublisher.bind { [unowned self] errors in
 			self.setupTextFields(errors)
 			}.disposed(by: disposeBag)
 	}
@@ -67,7 +67,7 @@ class RestoreVC: BaseVC, Routes, Validatable {
 extension RestoreVC {
 	func restoreRequest() {
 		showLoading()
-		subscribeWith(response: request.restoreRequest(email: email.value)) { response in
+		subscribeWith(response: request.restoreRequest(email: email.value)) { _ in
 //			self.close()
 		}
 	}

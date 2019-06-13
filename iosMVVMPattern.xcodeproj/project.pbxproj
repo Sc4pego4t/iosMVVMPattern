@@ -473,7 +473,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "aquadroid" */;
+			buildConfigurationList = F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "iosMVVMPattern" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -821,7 +821,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "aquadroid" */ = {
+		F9992DFE22A6B8E3009363B5 /* Build configuration list for PBXProject "iosMVVMPattern" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9992E1322A6B8E5009363B5 /* Debug */,

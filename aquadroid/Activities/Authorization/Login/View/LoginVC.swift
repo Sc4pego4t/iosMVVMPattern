@@ -43,15 +43,15 @@ class LoginVC: BaseVC, Routes, Validatable {
 
 	// MARK: Functionality
 	func setListeners() {
-		loginButton.rx.tapGesture().when(.recognized).bind { _ in
+		loginButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.loginRequest()
 		}.disposed(by: disposeBag)
 		
-		registerButton.rx.tapGesture().when(.recognized).bind { _ in
+		registerButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.openRegister()
 		}.disposed(by: disposeBag)
 		
-		restoreButton.rx.tapGesture().when(.recognized).bind { _ in
+		restoreButton.rx.tapGesture().when(.recognized).bind { [unowned self] _ in
 			self.openRestore()
 		}.disposed(by: disposeBag)
 	}
@@ -66,7 +66,7 @@ class LoginVC: BaseVC, Routes, Validatable {
 			.bind(to: loginButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 		
-		viewModel.errorPublisher.bind { errors in
+		viewModel.errorPublisher.bind { [unowned self] errors in
 			self.setupTextFields(errors)
 		}.disposed(by: disposeBag)
 	}

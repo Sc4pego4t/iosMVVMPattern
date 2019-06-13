@@ -27,7 +27,7 @@ class BaseVC: UIViewController, LoginRoute {
 	lazy var shadowView: UIView = {
 		let shadowView = UIView(frame: UIScreen.main.bounds)
 		
-		shadowView.backgroundColor = .blurColor
+		shadowView.backgroundColor = .blur
 		
 		let loadingIndicator = UIActivityIndicatorView(style: .white)
 		loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +101,7 @@ extension BaseVC {
 		
 		view.rx.tapGesture()
 			.when(.recognized)
-			.bind { _ in
+			.bind { [unowned self] _ in
 				self.view.endEditing(true)
 			}.disposed(by: disposeBag)
 	}

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:aquadroid.xcodeproj">
+      location = "group:/Users/andrejgluhih/Projects/iosMVVMPattern/iosMVVMPattern.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

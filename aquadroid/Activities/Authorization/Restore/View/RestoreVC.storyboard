@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uu-Mg-gAv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uu-Mg-gAv">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,11 +24,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-Ok-08U">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LPL-8B-NGh">
-                                                <rect key="frame" x="82" y="327" width="250" height="164"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LPL-8B-NGh">
+                                                <rect key="frame" x="57" y="239.5" width="300" height="339"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нужна помощь с восстановлением пароля?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40l-Ci-dgn">
+                                                        <rect key="frame" x="42.5" y="0.0" width="215" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите электронный адрес, который Вы указали при регистрации в приложении, и мы поможем Вам создать новый пароль." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWl-hc-q2F">
+                                                        <rect key="frame" x="3" y="68.5" width="294" height="76.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mi-Q4-QkC" customClass="ErrorTextField" customModule="aquadroid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                        <rect key="frame" x="25" y="175" width="250" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="B69-7X-Mi2"/>
                                                             <constraint firstAttribute="width" constant="250" id="rfX-6Q-qSf"/>
@@ -38,7 +50,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-3X-6Xc">
-                                                        <rect key="frame" x="0.0" y="70" width="250" height="94"/>
+                                                        <rect key="frame" x="25" y="245" width="250" height="94"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUv-rZ-oQj" customClass="ShadowButton" customModule="aquadroid" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -48,6 +60,9 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Восстановить"/>
+                                                                <state key="disabled">
+                                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="6"/>
@@ -72,11 +87,17 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="S33-RR-K9T"/>
+                                                    <constraint firstItem="NSi-3X-6Xc" firstAttribute="width" secondItem="3mi-Q4-QkC" secondAttribute="width" id="cVq-Fn-xhb"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="LPL-8B-NGh" secondAttribute="trailing" priority="750" constant="40" id="KZB-DR-4qF"/>
                                             <constraint firstItem="LPL-8B-NGh" firstAttribute="centerX" secondItem="Y0A-Ok-08U" secondAttribute="centerX" id="ScE-iQ-cYR"/>
+                                            <constraint firstItem="LPL-8B-NGh" firstAttribute="leading" secondItem="Y0A-Ok-08U" secondAttribute="leading" priority="750" constant="40" id="W2A-av-gGk"/>
                                             <constraint firstItem="LPL-8B-NGh" firstAttribute="centerY" secondItem="Y0A-Ok-08U" secondAttribute="centerY" id="kQW-of-80W"/>
                                         </constraints>
                                     </view>

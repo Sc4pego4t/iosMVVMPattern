@@ -13,41 +13,14 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="aquadroid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="iosMVVMPattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8PZ-ya-thm" customClass="TipView" customModule="aquadroid" customModuleProvider="target">
-                                <rect key="frame" x="107" y="188" width="200" height="63"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ces-l0-vsZ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-yC-a58">
-                                <rect key="frame" x="314" y="423" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1lz-LX-UDQ"/>
-                                    <constraint firstAttribute="width" constant="50" id="zKC-PE-4ea"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="8PZ-ya-thm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D77-Nk-Oxw"/>
-                            <constraint firstItem="Orz-yC-a58" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bjk-Ef-VJH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Orz-yC-a58" secondAttribute="trailing" constant="50" id="gff-gN-GcA"/>
-                            <constraint firstItem="8PZ-ya-thm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vKR-m1-wVh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mIV-ys-Iyt"/>
-                    <connections>
-                        <outlet property="blackView" destination="Orz-yC-a58" id="Ah3-WK-vd5"/>
-                        <outlet property="tipView" destination="8PZ-ya-thm" id="4No-f3-ds7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -77,7 +77,7 @@
 		F942B23822AA8881001D45CB /* LoginVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginVC.storyboard; sourceTree = "<group>"; };
 		F942B23F22AA8C34001D45CB /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		F942B24122AA964C001D45CB /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
-		F9992E0322A6B8E3009363B5 /* aquadroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aquadroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9992E0322A6B8E3009363B5 /* iosMVVMPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosMVVMPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9992E0622A6B8E4009363B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9992E0822A6B8E4009363B5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F9992E0B22A6B8E4009363B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		F9992DFA22A6B8E3009363B5 = {
 			isa = PBXGroup;
 			children = (
-				F9992E0522A6B8E4009363B5 /* aquadroid */,
+				F9992E0522A6B8E4009363B5 /* iosMVVMPattern */,
 				F9992E0422A6B8E3009363B5 /* Products */,
 				02E4FFA8D4921E32925836CD /* Pods */,
 				DF48459224653FB0C59AF309 /* Frameworks */,
@@ -210,12 +210,12 @@
 		F9992E0422A6B8E3009363B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9992E0322A6B8E3009363B5 /* aquadroid.app */,
+				F9992E0322A6B8E3009363B5 /* iosMVVMPattern.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9992E0522A6B8E4009363B5 /* aquadroid */ = {
+		F9992E0522A6B8E4009363B5 /* iosMVVMPattern */ = {
 			isa = PBXGroup;
 			children = (
 				F9E7A7D922A7B86300AA687E /* Base */,
@@ -228,7 +228,7 @@
 				F9992E0F22A6B8E5009363B5 /* LaunchScreen.storyboard */,
 				F9992E1222A6B8E5009363B5 /* Info.plist */,
 			);
-			path = aquadroid;
+			path = iosMVVMPattern;
 			sourceTree = "<group>";
 		};
 		F9992E1E22A79A6F009363B5 /* Utils */ = {
@@ -437,9 +437,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9992E0222A6B8E3009363B5 /* aquadroid */ = {
+		F9992E0222A6B8E3009363B5 /* iosMVVMPattern */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "aquadroid" */;
+			buildConfigurationList = F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "iosMVVMPattern" */;
 			buildPhases = (
 				EE5682022475619719ABFA88 /* [CP] Check Pods Manifest.lock */,
 				F9992E1822A796CA009363B5 /* R.Swift */,
@@ -453,9 +453,9 @@
 			);
 			dependencies = (
 			);
-			name = aquadroid;
+			name = iosMVVMPattern;
 			productName = aquadroid;
-			productReference = F9992E0322A6B8E3009363B5 /* aquadroid.app */;
+			productReference = F9992E0322A6B8E3009363B5 /* iosMVVMPattern.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -486,7 +486,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9992E0222A6B8E3009363B5 /* aquadroid */,
+				F9992E0222A6B8E3009363B5 /* iosMVVMPattern */,
 			);
 		};
 /* End PBXProject section */
@@ -563,11 +563,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/aquadroid/Resources/R.generated.swift,
+				$SRCROOT/iosMVVMPattern/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/aquadroid/Resources/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iosMVVMPattern/Resources/R.generated.swift\"\n";
 		};
 		F9992E1D22A797A1009363B5 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -785,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EY2FX8K5E8;
-				INFOPLIST_FILE = aquadroid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iosMVVMPattern/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -805,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EY2FX8K5E8;
-				INFOPLIST_FILE = aquadroid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iosMVVMPattern/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -830,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "aquadroid" */ = {
+		F9992E1522A6B8E5009363B5 /* Build configuration list for PBXNativeTarget "iosMVVMPattern" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9992E1622A6B8E5009363B5 /* Debug */,

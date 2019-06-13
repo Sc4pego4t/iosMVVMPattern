@@ -6,8 +6,8 @@ disabled_rules:
 excluded:
 - Carthage
 - Pods
-- aquadroid/Resources/R.generated.swift
-- aquadroid/Utils/Extensions/+UIDevice.swift
+- iosMVVMPattern/Resources/R.generated.swift
+- iosMVVMPattern/Utils/Extensions/+UIDevice.swift
 
 identifier_name:
   min_length: # only min_length
